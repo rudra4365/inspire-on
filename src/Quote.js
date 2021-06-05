@@ -4,7 +4,7 @@ import './Quote.css'
 function Quote(props) {
     return (
         <div className = "main">
-            <br></br>
+        <br/>
       <span>
         <strong>{props.text}</strong> &nbsp; <span>{props.author}</span>
       </span>
