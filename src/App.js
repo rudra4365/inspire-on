@@ -3,12 +3,15 @@ import { Layout, Button, List } from 'antd'
 import { DownloadOutlined } from '@ant-design/icons'
 import './App.css';
 import Quote from './Quote'
+import Swiper from './Swiper'
 
 const config = {
   apiUrl: 'https://type.fit/api/quotes'
 }
 
 function App() {
+
+
 
   const [quotes, setQuotes] = useState([])
   const [isLoading, setIsLoading] = useState(false)
@@ -31,6 +34,7 @@ function App() {
 
   return (
     <div className="App">
+      <Swiper qts = {quotes} />
       <div className = "main-heading">Inspire-ON</div>
       <Layout>
       <div className="container">
