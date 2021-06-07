@@ -1,10 +1,10 @@
 .App {
   text-align: center;
-  background-color: black;
+  background-color: white;
 }
 
 .main-heading {
-  color: white;
+  color: black;
   font-size: 4rem;
 }
 
