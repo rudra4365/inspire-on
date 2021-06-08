@@ -4,6 +4,7 @@ import { DownloadOutlined } from '@ant-design/icons'
 import './App.css';
 import Quote from './Quote'
 import Swiper from './Swiper'
+import All from './All'
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -52,19 +53,18 @@ function App() {
 
   return (
     <div className="App">
-      <Swiper qts = {quotes} />
       <div className = "main-heading">Inspire-ON</div>
       <FormControl component="fieldset">
-      <FormLabel component="legend">Gender</FormLabel>
+      <FormLabel component="legend">Choose the preferred theme</FormLabel>
       <RadioGroup row aria-label="gender" name="gender1" value={value} onChange={handleChange}>
-        <FormControlLabel value="female" control={<Radio />} label="Female" />
-        <FormControlLabel value="male" control={<Radio />} label="Male" />
-        <FormControlLabel value="other" control={<Radio />} label="Other" />
+        <FormControlLabel value="Swiper quotes" control={<Radio />} label="Swiper quotes" />
+        <FormControlLabel value="All in one quotes" control={<Radio />} label="All in one quotes" />
+        {/* <FormControlLabel value="other" control={<Radio />} label="Other" /> */}
         {/* <FormControlLabel value="disabled" disabled control={<Radio />} label="(Disabled option)" /> */}
       </RadioGroup>
       </FormControl>
       <Layout>
-      <div className="container">
+      {/* <div className="container">
         <List
           size="small"
           loading={isLoading}
@@ -86,6 +86,10 @@ function App() {
             </List.Item>
           )}
         />
+      </div> */}
+      <div className = "together">
+      <All />
+      <Swiper qts = {quotes} />
       </div>
     </Layout>
     </div>
