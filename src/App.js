@@ -21,15 +21,23 @@ function App() {
 
   const [quotes, setQuotes] = useState([])
   const [isLoading, setIsLoading] = useState(false)
-
+  const [value, setValue] = React.useState('Swiper quotes');
+  const [showw, changeShoww] = useState('<All />')
+  let showing = <All />
 
   // To call the API to receive all the quotes 
   useEffect(() => {
     getQuotes();
+    if(value === 'Swiper quotes') {
+      changeShoww('<Swiper qts = quotes />')
+    } else {
+      showing = <All />
+    }
     return;
-  }, [])
+  }, [value])
 
-  const [value, setValue] = React.useState('female');
+  const swpr = <Swiper qts = {quotes} />
+  const all = <All />
 
   const handleChange = (event) => {
     setValue(event.target.value);
@@ -88,8 +96,17 @@ function App() {
         />
       </div> */}
       <div className = "together">
-      <All />
-      <Swiper qts = {quotes} />
+
+      {
+        value == "Swiper quotes" &&  swpr
+      }
+      {
+        value == "All in one quotes" &&  all
+      }
+
+
+      {/* <All /> */}
+      {/* <Swiper qts = {quotes} /> */}
       </div>
     </Layout>
     </div>
