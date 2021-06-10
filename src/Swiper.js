@@ -8,6 +8,7 @@ import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
+import "./Swiper.css"
 
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
@@ -74,6 +75,7 @@ function Swiper(props) {
     }
 
   return (
+    <div className = "outer">
     <div className={classes.root}>
       <Paper square elevation={0} className={classes.header}>
         <Typography>{Steps[activeStep].label}</Typography>
@@ -110,6 +112,7 @@ function Swiper(props) {
           </Button>
         }
       />
+    </div>
     </div>
   );
 }
