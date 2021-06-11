@@ -71,7 +71,7 @@ function App() {
         {/* <FormControlLabel value="disabled" disabled control={<Radio />} label="(Disabled option)" /> */}
       </RadioGroup>
       </FormControl>
-      <Layout>
+      {/* <Layout> */}
       {/* <div className="container">
         <List
           size="small"
@@ -95,7 +95,7 @@ function App() {
           )}
         />
       </div> */}
-      <div className = "together">
+      <div>
 
       {
         value == "Swiper quotes" &&  swpr
@@ -108,7 +108,7 @@ function App() {
       {/* <All /> */}
       {/* <Swiper qts = {quotes} /> */}
       </div>
-    </Layout>
+    {/* </Layout> */}
     </div>
   );
 }

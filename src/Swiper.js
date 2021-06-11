@@ -15,20 +15,21 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const Steps = [
     {
-        label: "first",
-        imgPath: "path"
+        label: "It is not in the stars to hold our destiny but in ourselves.",
+        imgPath: "William Shakespeare"
     }
 ];
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 400,
+    maxWidth: 500,
     flexGrow: 1,
   },
   header: {
     display: 'flex',
     alignItems: 'center',
-    height: 50,
+    height: 100,
+    width: 500,
     paddingLeft: theme.spacing(4),
     backgroundColor: theme.palette.background.default,
   },
@@ -75,7 +76,7 @@ function Swiper(props) {
     }
 
   return (
-    <div className = "outer">
+    <div className = "App2">
     <div className={classes.root}>
       <Paper square elevation={0} className={classes.header}>
         <Typography>{Steps[activeStep].label}</Typography>
